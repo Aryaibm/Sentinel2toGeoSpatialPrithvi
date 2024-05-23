@@ -1,0 +1,66 @@
+{
+    "request": {
+        "headers": {
+            "accept": "image/tiff",
+            "content-type": "application/json"
+        },
+        "payload": {
+            "evalscript": "\n//VERSION=3\n\nfunction evaluatePixel(samples) {\n  return [samples.B02, samples.B03, samples.B04, samples.B8A, samples.B11, samples.B12, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [{\n      bands: [\n        \"B02\",\n        \"B03\",\n        \"B04\",\n        \"B8A\",\n        \"B11\",\n        \"B12\",\n        \"dataMask\"\n      ]\n    }],\n    output: {\n      bands: 6\n    }\n  }\n}\n",
+            "input": {
+                "bounds": {
+                    "bbox": [
+                        142.4683333,
+                        43.2208333,
+                        142.5005556,
+                        43.2422222
+                    ],
+                    "properties": {
+                        "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"
+                    }
+                },
+                "data": [
+                    {
+                        "dataFilter": {
+                            "mosaickingOrder": "leastCC",
+                            "timeRange": {
+                                "from": "2023-09-01T00:00:00Z",
+                                "to": "2023-09-30T23:59:59Z"
+                            }
+                        },
+                        "type": "sentinel-2-l2a"
+                    }
+                ]
+            },
+            "output": {
+                "height": 242,
+                "responses": [
+                    {
+                        "format": {
+                            "type": "image/tiff"
+                        },
+                        "identifier": "default"
+                    }
+                ],
+                "width": 257
+            }
+        },
+        "timestamp": "2024-03-21T08:28:19.098882",
+        "url": "https://services.sentinel-hub.com/api/v1/process"
+    },
+    "response": {
+        "elapsed": 1.39005,
+        "headers": {
+            "Connection": "keep-alive",
+            "Content-Type": "image/tiff",
+            "Date": "Thu, 21 Mar 2024 02:58:18 GMT",
+            "Transfer-Encoding": "chunked",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-headers": "origin,content-type,accept,accept-crs,authorization,cache-control",
+            "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH",
+            "access-control-allow-origin": "*",
+            "access-control-max-age": "3600",
+            "x-processingunits-spent": "0.4745025634765625"
+        },
+        "status_code": 200
+    }
+}
