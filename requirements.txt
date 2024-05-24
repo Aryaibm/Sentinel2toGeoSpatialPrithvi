@@ -41,7 +41,7 @@ fonttools==4.49.0
 fqdn==1.5.1
 frozenlist==1.4.1
 fsspec==2024.2.0
-GDAL @ file:///Users/runner/miniforge3/conda-bld/gdal-split_1709842523676/work/build/swig/python
+GDAL 
 geopandas==0.14.3
 geoviews==1.11.1
 h11==0.14.0
@@ -98,7 +98,7 @@ nest-asyncio==1.6.0
 networkx==3.2.1
 notebook==7.1.1
 notebook_shim==0.2.4
-numpy @ file:///Users/runner/miniforge3/conda-bld/numpy_1707225421156/work/dist/numpy-1.26.4-cp312-cp312-macosx_11_0_arm64.whl#sha256=011d57633d659db8280a5811d62d0c5a615719a6d7cbd46a04f6ffce0c2a7db3
+numpy
 oauthlib==3.2.2
 opencv-python==4.9.0
 overrides==7.7.0
