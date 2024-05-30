@@ -1,4 +1,4 @@
-# Sentinel2toGeoSpatialPrithvi
+`# Sentinel2toGeoSpatialPrithvi
 Code to generate input data for Geo Spatial Prithvi Crop Classification problem using Sentinel-2 satellite data
 
 This code takes three time steps (months) data from same year as input and generates a data of size 224x224x16. 
