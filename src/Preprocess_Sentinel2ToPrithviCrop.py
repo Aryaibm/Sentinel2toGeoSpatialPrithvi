@@ -43,7 +43,7 @@ def read_window_sentinel(root_folder, year, months):
     for month in months:
         # Construct the directory path
         directory = os.path.join(root_folder, year, month, "*")
-
+        print ("\n\n\n", directory)
         temp = glob.glob(directory)
         filename = temp[0]+"/response.tiff"
         windowing_sentinel(filename, root_folder, year, month)
@@ -57,7 +57,7 @@ def stacking_images_level1(root_folder, year, months):
     file_paths = [dat1, dat2, dat3]
 
     #Read one image of HLS to get its metadata
-    file_path = "./src/time_step_0.tif"
+    file_path = "./Sentinel2toGeoSpatialPrithvi/src/time_step_0.tif"
 
     first_dataset = gdal.Open(file_path, gdalconst.GA_ReadOnly)
     if first_dataset is None:
@@ -153,7 +153,7 @@ def resplitting_stacks(root_folder, year):
 def scaling_bands(root_folder, year):
     # Scaling
     time_step_path = root_folder+year+"/Initial_merged"
-    tgt_path = "./src/time_step_0.tif"
+    tgt_path = "./Sentinel2toGeoSpatialPrithvi/src/time_step_0.tif"
     time_steps=3
     for time_step in range(time_steps):
         # Load the source and target raster images
@@ -210,7 +210,7 @@ def restack_rescaled(root_folder, year):
     # file_paths = ['../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif', '../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif', '../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif']
 
     #Read one image of HLS to get its metadata
-    file_path = "./src/time_step_0.tif"
+    file_path = "./Sentinel2toGeoSpatialPrithvi/src/time_step_0.tif"
 
     first_dataset = gdal.Open(file_path, gdalconst.GA_ReadOnly)
     if first_dataset is None:
@@ -250,7 +250,7 @@ def restack_rescaled(root_folder, year):
 def main():
     print("Welcome")
     # Modify the data path, year and month
-    root_folder = "./Data_Japan/Sentinel_Data/"
+    root_folder = "./Sentinel2toGeoSpatialPrithvi/Data_Japan/Sentinel_Data/"
     year = "2023"
     months = ["May", "June",  "Sep"]
 
