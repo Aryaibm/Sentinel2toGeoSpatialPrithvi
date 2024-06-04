@@ -207,8 +207,7 @@ def restack_rescaled(root_folder, year):
     dat3 = root_folder+year+"/scaled_image_2.tif"
 
     file_paths = [dat1, dat2, dat3]
-    # file_paths = ['../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif', '../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif', '../Data_MAM/Sentinel_Data/2021/scaled_image_2.tif']
-
+    
     #Read one image of HLS to get its metadata
     file_path = "./Sentinel2toGeoSpatialPrithvi/src/time_step_0.tif"
 
@@ -245,7 +244,8 @@ def restack_rescaled(root_folder, year):
     # Close the merged dataset
     merged_dataset = None
 
-    print("\n\nPre-processed data saved as "+ root_folder + "input_" + year + ".tif \n")
+    print("\n\n Successfully completed the pre-processing of Sentinel-2 data")
+    print("\nPre-processed data saved as "+ root_folder + "input_" + year + ".tif \n")
 
 def main():
     print("Welcome")
