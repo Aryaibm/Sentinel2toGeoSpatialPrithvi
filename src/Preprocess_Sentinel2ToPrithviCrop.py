@@ -245,7 +245,7 @@ def restack_rescaled(root_folder, year):
     # Close the merged dataset
     merged_dataset = None
 
-    print("\n\nPre-processed data saved as "+ root_folder + "input_" + year + ".tif \n")
+    print("\n\nSuccessfully pre-processed and data is saved as "+ root_folder + "input_" + year + ".tif \n\n")
 
 def main():
     print("Welcome")
